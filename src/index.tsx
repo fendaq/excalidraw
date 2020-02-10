@@ -1932,11 +1932,7 @@ export class App extends React.Component<any, AppState> {
     let localScrollX = this.state.scrollX;
     let localScrollY = this.state.scrollY;
 
-    if (
-      this.canvas !== null &&
-      this.state.zoom !== 1 &&
-      prevState.zoom !== this.state.zoom
-    ) {
+    if (this.canvas !== null && prevState.zoom !== this.state.zoom) {
       const { x, y } = getZoomTranslation(
         this.canvas,
         prevState.zoom,
